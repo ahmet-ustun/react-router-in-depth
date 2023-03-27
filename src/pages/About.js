@@ -1,4 +1,13 @@
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
+
 function About() {
+  const [user, setUser] = useState("mario");
+
+  if (!user) {
+    return <Navigate to="/" replace={true} />;
+  }
+
   return (
     <div className="about">
       <h2>About Us</h2>
@@ -20,6 +29,7 @@ function About() {
         eveniet iusto? Eius nostrum quos aspernatur nesciunt fugiat perferendis?
         Ab, minus!
       </p>
+      <button onClick={() => setUser(null)}>Logout</button>
     </div>
   );
 }
