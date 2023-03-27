@@ -1,4 +1,4 @@
-function Faq() {
+export function Faq() {
   return (
     <div className="faq">
       <h3>Frequently Asked Questions</h3>
@@ -65,5 +65,3 @@ function Faq() {
     </div>
   );
 }
-
-export default Faq;

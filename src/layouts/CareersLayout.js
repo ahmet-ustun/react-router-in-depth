@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-function CareersLayout() {
+export function CareersLayout() {
   return (
     <div className="careers-layout">
       <h2>Careers</h2>
@@ -9,5 +9,3 @@ function CareersLayout() {
     </div>
   );
 }
-
-export default CareersLayout;

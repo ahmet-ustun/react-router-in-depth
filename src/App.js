@@ -5,22 +5,21 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import RootLayout from "./layouts/RootLayout";
-import HelpLayout from "./layouts/HelpLayout";
-import CareersLayout from "./layouts/CareersLayout";
+import { CareersLayout, HelpLayout, RootLayout } from "./layouts";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
-import Faq from "./pages/help/Faq";
-import Contact from "./pages/help/Contact";
+import { Contact, Faq } from "./pages/help";
 
-import Careers, { careersLoader } from "./pages/careers/Careers";
-import CareerDetails, {
-  CareerDetailsLoader,
-} from "./pages/careers/CareerDetails.js";
-import CareersError from "./pages/careers/CareersError.js";
+import {
+  CareerDetails,
+  careerDetailsLoader,
+  Careers,
+  careersLoader,
+  CareersError,
+} from "./pages/careers";
 
 const browserRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -42,7 +41,7 @@ const browserRouter = createBrowserRouter(
         <Route
           path=":id"
           element={<CareerDetails />}
-          loader={CareerDetailsLoader}
+          loader={careerDetailsLoader}
         />
       </Route>
 

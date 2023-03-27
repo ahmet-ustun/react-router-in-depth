@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 
-function CareerDetails() {
+export function CareerDetails() {
   const { id } = useParams();
   const career = useLoaderData();
 
@@ -21,7 +21,7 @@ function CareerDetails() {
   );
 }
 
-export const CareerDetailsLoader = async ({ params }) => {
+export const careerDetailsLoader = async ({ params }) => {
   const { id } = params;
   const response = await fetch(`http://localhost:4000/careers/${id}`);
 
@@ -31,5 +31,3 @@ export const CareerDetailsLoader = async ({ params }) => {
 
   return response.json();
 };
-
-export default CareerDetails;

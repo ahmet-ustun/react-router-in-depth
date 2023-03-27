@@ -1,6 +1,6 @@
 import { Link, useRouteError } from "react-router-dom";
 
-function CareersError() {
+export function CareersError() {
   const error = useRouteError();
 
   return (
@@ -13,5 +13,3 @@ function CareersError() {
     </div>
   );
 }
-
-export default CareersError;

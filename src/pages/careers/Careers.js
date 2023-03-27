@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 
-function Careers() {
+export function Careers() {
   const careers = useLoaderData();
 
   return (
@@ -24,5 +24,3 @@ export const careersLoader = async () => {
 
   return response.json();
 };
-
-export default Careers;
