@@ -25,6 +25,10 @@ export const CareerDetailsLoader = async ({ params }) => {
   const { id } = params;
   const response = await fetch(`http://localhost:4000/careers/${id}`);
 
+  if (!response.ok) {
+    throw Error("Couldn't find this career!");
+  }
+
   return response.json();
 };
 
